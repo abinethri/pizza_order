@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pizza Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script type="text/javascript" src="/js/jquery-1.12.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+      
+      <script type="text/javascript" src="/js/script.js">
+      </script>
+      
+      <!--Load the AJAX API-->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+		
+		  // Load the Visualization API library and the piechart library.
+		  google.load('visualization', '1.0', {'packages':['corechart']});
+		  google.setOnLoadCallback(function () {
+			  var resp_values;
+			  draw_pie_chart(resp_values);
+		  });
+
+          google.load('visualization', '1.0', {'packages':['sankey']});
+          google.setOnLoadCallback(function () {
+        	  var sanky_chart_data;
+        	  draw_sanky_chart(sanky_chart_data);
+          });
+		     
+		</script>
+</head>
+
+<body>
+<div>
+ <!--first div-->
+<div class="jumbotron text-center">
+  <h3>Build Your Own Pizza</h3>
+  
+</div>
+<!--first div-->
+
+<!--second div-->
+<div class="container">
+  
+  <ul class="nav nav-pills nav-justified">
+    <li class="active"><a data-toggle="tab" href="#home">SIZE</a></li>
+    <li><a data-toggle="tab" href="#menu1">CHEESE</a></li>
+    <li><a data-toggle="tab" href="#menu2">TOPPINGS</a></li>
+    <li><a data-toggle="tab" href="#menu3">DASHBOARD</a></li>
+  </ul>
+  
+  <div class="tab-content">
+  <!--choose size and crust option1 -->
+    <div id="home" class="tab-pane fade in active">
+      <h4>CHOOSE SIZE AND CRUST</h4>
+      
+      <div class="row">
+      <div class="col-sm-3">
+      <div id="content-box1">
+        <span class="heading"><p><b>HAND TOSSED</b></p></span>
+        <p> Garlic-seasoned crust with a rich, buttery taste.</p>
+          <div>
+            <input type="radio" name="ht" value="hand tossed small(10)"/>
+            <span id="equate1">Small(10")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value="hand tossed medium(12)"/>
+            <span id="equate1">Medium(12")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value=" hand tossed large(14)"/>
+            <span id="equate1">Large(14")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value="hand tossed xl(16)"/>
+            <span id="equate1">X-Large(16")</span>
+          </div>
+      </div>
+      </div>
+      
+      <div class="col-sm-3">
+      <div id="content-box2"> 
+        <span class="heading"><b>HANDMADE PAN</b></p></span>
+        <p>Two layers of cheese,toppings to the edge, and a crust that bakes up golden and crispy with a buttery taste.</p>
+        <div>
+          <input type="radio" name="ht" value="handmade pan medium(12)"/>
+          <span id="equate1">Medium(12")</span>
+        </div>
+      </div>
+      </div>
+      
+      <div class="col-sm-3">
+      <div id="content-box3">
+        <span class="heading"><b> CRUNCHY THIN CRUST</b></p></span>
+        <p>Thin enough for the optimum crispy to crunchy ration.</p>
+        
+          <div>
+            <input type="radio" name="ht" value=" crunchy thin crust medium(12)"/>
+            <span id="equate1">Medium(12")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value="crunchy thin crust large(14)"/>
+            <span id="equate1">Large(14")</span>
+          </div>
+           
+      </div>
+      </div>
+      
+      <div class="col-sm-3" >
+      <div id="content-box4">
+        <span class="heading"><b> BROOKLYN STYLE</b></p></span>
+        <p>Hand stretched to be bid, thin, and perfectly foldable.</p>
+        
+          <div>
+            <input type="radio" name="ht" value=" brooklyn style large(14)"/>
+            <span id="equate1">Large(14")</span>
+          </div>
+          <div>
+            <input type="radio" name="ht" value=" brooklyn style xl(16)"/>
+            <span id="equate1">X-Large(16")</span>
+          </div>
+      </div>  
+      </div>
+      </div> <!--end of 1st row class  -->
+      
+      <div class="row">
+      <div class="col-sm-3 ">
+      <div id="content-box5">
+        <span class="heading"><b> GLUTEN FREE CRUST</b></p></span>
+        <p>Domino's pizza made with a Gluten Free Crust.</p>
+          <div>
+          <input type="radio" name="ht" value="gluten free crust small"/>
+          <span id="equate2">Small(10")</span>
+        </div>
+        
+      </div>  
+      </div>
+      </div> <!--end of class row div -->   
+    </div> <!--end of tab fade in active class -->   
+    <!--choose size and crust option1 -->
+    
+    
+    <!--choose cheese option2 -->
+    <div id="menu1" class="tab-pane fade">
+       <h4>CHOOSE CHEESE AND SAUCE </h4>   
+    
+      <div class="row">
+      <div class="col-sm-3 ">
+      <div id="content-box6">
+      <span class="heading"><b> CHOOSE CHEESE</b></p></span>
+             
+             <div>
+                <input type="checkbox" name="cheese" style="margin-bottom: 7px;" value="Mozzerella"> Mozzerella<br>
+                <input type="checkbox" name="cheese" style="margin-bottom: 7px;" value="Italian Cheese"> Italian Cheese<br>
+                <input type="checkbox" name="cheese" style="margin-bottom: 7px;" value="Blue Cheese"> Blue Cheese<br>
+              </div>
+      </div>
+      </div>
+      
+      <div class="col-sm-3 ">
+      <div id="content-box7">
+       <span class="heading"><b> CHOOSE SAUCE</b></p></span>
+                
+                    <div>
+                        <input type="checkbox" name="sauce" style="margin-bottom: 7px;" value="Salsa"> Salsa<br>
+                        <input type="checkbox" name="sauce" style="margin-bottom: 7px;" value="Pesto"> Pesto<br>
+                        <input type="checkbox" name="sauce" style="margin-bottom: 7px;" value="BBQ"> BBQ Sauce<br>
+                        <input type="checkbox" name="sauce" style="margin-bottom: 7px;" value="Ranch"> Ranch<br>
+                    </div> 
+      </div>
+      </div>                    
+    </div> <!--row class div ends here -->      
+    </div>
+    <!--choose cheese option2 -->
+
+    <!--choose toppings option3 -->
+    <div id="menu2" class="tab-pane fade">
+      <h4>CHOOSE TOPPINGS</h4>
+         <div class="row">
+         <div class="col-sm-3 ">
+          <div id="content-box7">
+            <span class="heading"><b>CHOOSE MEATS</b></p></span>
+            
+              <div>
+                <input type="checkbox" name="meat" style="margin-bottom: 7px;" value="Pepperoni"> Pepperoni<br>
+                <input type="checkbox" name="meat" style="margin-bottom: 7px;" value="Italian Sausage">Italian Sausage<br>
+                <input type="checkbox" name="meat" style="margin-bottom: 7px;" value="Sliced Italian Sausage">Sliced Italian Sausage<br>
+                <input type="checkbox" name="meat" style="margin-bottom: 7px;" value="Beef">Beef</Beef><br>
+              </div>
+            </div> 
+          </div>
+           
+           <div class= "col-sm-3 ">
+              <div id="content-box8">
+                <span class="heading"><b>CHOOSE NON-MEATS</b></p></span>
+                
+                    <div>
+                        
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Black Olives"> Black Olives<br>
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Garlic"> Garlic<br>
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Green Peppers"> Green Peppers<br>
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Jalapeno Peppers">Jalapeno Peppers<br>
+                        <input type="checkbox" name="nonmeat" style="margin-bottom: 7px;" value="Onions"> Onions<br>
+                    
+                    </div>
+            </div>
+            </div>
+      </div>  <!--row class div ends here-->           
+    </div>    
+    <!--choose toppings option3 -->
+     
+     
+     <!--Choose Dashboard -->
+    <div id="menu3" class="tab-pane fade">
+      <h4>DASHBOARD</h4>
+      <div id="pizza_chart_div" class="pull-left"></div>
+      <div id="sankey_basic" class="pull-right" ></div>
+    </div>
+    
+   <!--Choose Dashboard -->
+   
+  </div> <!--end of tab content class  -->
+</div>  <!--end of container class -->
+
+<!--second div-->
+
+
+<!--third div-->
+    
+       
+<div style="align:center;">
+	<button class="build" id="btn_build" onclick="sendDataToDatabase()">Order</button>
+	<button class="cancel" onclick="cancelOptions()">Cancel</button>
+</div>
+
+<!--third div-->
+  
+</div>
+
+</body>
+</html>
+
+
+

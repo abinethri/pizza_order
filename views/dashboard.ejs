@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pizza Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script type="text/javascript" src="/js/jquery-1.12.1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+      
+      <script type="text/javascript" src="/js/script.js">
+      </script>
+    
+      <!--Load the AJAX API-->
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+		
+		  // Load the Visualization API library and the piechart library.
+		  google.load('visualization', '1.0', {'packages':['corechart']});
+		  google.setOnLoadCallback(draw);
+
+          google.load('visualization', '1.0', {'packages':['sankey']});
+          google.setOnLoadCallback(drawChart);
+		     
+		</script>
+</head>
+<body>
+  <h3 align="center">Pizza Dashboard</h3>
+<div id="menu3" class="tab-pane fade">
+  <h4>DASHBOARD</h4>
+  <div id="pizza_chart_div" class="pull-left"></div>
+  <div id="sankey_basic" class="pull-right" ></div>
+</div>
+<div style="align:center;">
+	<button class="cancel" >Home Page</button>
+</div>
+
+
+</div>
+</div>
+</body>
+</html>
