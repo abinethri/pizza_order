@@ -21,6 +21,7 @@
 		
 		  // Load the Visualization API library and the piechart library.
 		  google.load('visualization', '1.0', {'packages':['corechart']});
+
 		  google.setOnLoadCallback(function () {
 			  var resp_values;
 			  draw_pie_chart(resp_values);
@@ -31,33 +32,53 @@
         	  var sanky_chart_data;
         	  draw_sanky_chart(sanky_chart_data);
           });
-		     
+
+          function hideButtons(event) {
+			  console.log("Coming to hide");
+			  //var elem = '<div id="menu3" class="tab-pane fade">';
+			  //elem = elem + '<h4>DASHBOARD</h4>';
+			  //elem = elem + '<div id="pizza_chart_div" class="pull-left"></div>';
+			  //elem = elem + '<div id="sankey_basic" class="pull-right" ></div>';
+			  //elem = elem + '</div>"';
+			  //console.log("Adding div = ", elem);
+			  //document.getElementsByClassName("tab-content")[0].innerHtml = document.getElementsByTagName("tab-content")[0].innerHtml + elem;
+			  //console.log("innerHtml = ", document.getElementsByClassName("tab-content")[0].innerHtml);
+			  //document.getElementsByTagName("button").style.visibility = "hidden";
+			  document.getElementById("btn_build").style.visibility = "hidden";
+			  document.getElementById("btn_cancel").style.visibility = "hidden";
+		  }
+          
+          function unhideButtons(event) {
+        	  console.log("Coming to unhide");
+        	  document.getElementById("btn_build").style.visibility = "visible";
+			  document.getElementById("btn_cancel").style.visibility = "visible";
+          }
 		</script>
 </head>
 
 <body>
 <div>
  <!--first div-->
-<div class="jumbotron text-center">
-  <h3>Build Your Own Pizza</h3>
-  
+<div class="jumbotron text-center" >
+
+  <h3>Build Your Own Pizza</h3> 
 </div>
 <!--first div-->
 
 <!--second div-->
 <div class="container">
   
-  <ul class="nav nav-pills nav-justified">
-    <li class="active"><a data-toggle="tab" href="#home">SIZE</a></li>
-    <li><a data-toggle="tab" href="#menu1">CHEESE</a></li>
-    <li><a data-toggle="tab" href="#menu2">TOPPINGS</a></li>
-    <li><a data-toggle="tab" href="#menu3">DASHBOARD</a></li>
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a data-toggle="tab" href="#home" onclick="unhideButtons(this)">SIZE</a></li>
+    <li><a data-toggle="tab" href="#menu1" onclick="unhideButtons(this)">CHEESE</a></li>
+    <li><a data-toggle="tab" href="#menu2" onclick="unhideButtons(this)">TOPPINGS</a></li>
+    <li><a data-toggle="tab" href="#menu3" onclick="hideButtons(this)">DASHBOARD</a></li>
   </ul>
   
   <div class="tab-content">
   <!--choose size and crust option1 -->
     <div id="home" class="tab-pane fade in active">
-      <h4>CHOOSE SIZE AND CRUST</h4>
+      <h4 >CHOOSE SIZE AND CRUST</h4>
       
       <div class="row">
       <div class="col-sm-3">
@@ -130,8 +151,8 @@
       
       <div class="row">
       <div class="col-sm-3 ">
-      <div id="content-box5">
-        <span class="heading"><b> GLUTEN FREE CRUST</b></p></span>
+      <div id="content-box5" >
+        <span class="heading" ><b> GLUTEN FREE CRUST</b></p></span>
         <p>Domino's pizza made with a Gluten Free Crust.</p>
           <div>
           <input type="radio" name="ht" value="gluten free crust small"/>
@@ -223,24 +244,26 @@
     </div>
     
    <!--Choose Dashboard -->
-   
+    
+    
+    <!--third div-->
+    
+       
+<div  style="align:center;">
+	<button class="build" id="btn_build" onclick="sendDataToDatabase()">Order</button>
+	<button class="cancel" id="btn_cancel" onclick="cancelOptions()">Cancel</button>
+</div>
+
+<!--third div-->
   </div> <!--end of tab content class  -->
 </div>  <!--end of container class -->
 
 <!--second div-->
 
 
-<!--third div-->
-    
-       
-<div style="align:center;">
-	<button class="build" id="btn_build" onclick="sendDataToDatabase()">Order</button>
-	<button class="cancel" onclick="cancelOptions()">Cancel</button>
-</div>
 
-<!--third div-->
   
-</div>
+
 
 </body>
 </html>

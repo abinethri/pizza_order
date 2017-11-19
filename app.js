@@ -58,6 +58,7 @@ app.post('/savedata', function(req, res){
 
 		collection = db.collection('pizzaorder');
 		collection.insert({orderid:req.body.orderid,
+			size: req.body.size,
 			cheese: req.body.cheese, 
 			sauce:req.body.sauce, 
 			meat:req.body.meat, 

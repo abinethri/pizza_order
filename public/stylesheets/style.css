@@ -1,3 +1,92 @@
 <!--Abinethri custom css-->
 
+body{ background-color: white; }
+   .jumbotron{
+        background-color: #ff8080 !important;
+   }
 
+	h3 { 
+			font-family: Arial, Helvetica, sans-serif;
+			color: white;
+			font-weight: bold; 
+			}
+			
+	h4{
+	        color:#007acc;
+	        font-weight: bold;
+	}	
+		
+	#content-box1, #content-box2, #content-box3, #content-box4, #content-box5, #content-box6, #content-box7, #content-box8{
+					color:#007acc;
+					font-size: 15px;
+					font-weight: bold;
+					}		
+   	#content-box5{
+   	        margin-top:30px;
+    	     	}
+   	
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+        color: white;
+        background-color: #ff8080;
+    }
+
+.nav-tabs a{
+	color: white;
+	background-color:#007acc;
+	margin-left:2px;
+    font-weight: bold;
+}
+
+.nav-tabs >a:hover{
+	background-color: #ff8080;
+}
+
+.build {
+    background-color: #007acc; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top:30px;
+    margin-left: 500px;
+    float: left;
+    font-weight: bold;
+    
+}
+
+.cancel{
+	background-color: #007acc; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+    margin-top:30px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+
+.build:hover {
+    background-color:#ff8080 ;
+}
+
+.button:active {
+  background-color: #ff8080;
+}
+
+.cancel:hover {
+    background-color: #ff8080;
+}
+
+.build:hover {
+    background-color:#ff8080 ;
+}
